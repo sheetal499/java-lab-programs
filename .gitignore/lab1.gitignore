@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class lab_1
+{
+	public static void main(String args[])
+	{
+		Scanner sc= new Scanner(System.in);
+        int size;
+        System.out.println("enter the size of array : ");
+		size=sc.nextInt();
+		System.out.println("enter elements ::"); 
+		int[] arr=new int[size];
+		for (int i=0;i<size ;i++ ) {
+			arr[i]=sc.nextInt();
+		}
+		int large1=arr[0],smallest=arr[0];
+		for(int i=1;i<size;i++)
+		{
+		  if(large1<arr[i])
+		  {
+		  	large1=arr[i];
+		  }
+		}
+		for(int i=1;i<size;i++)
+		{
+		  if(smallest>arr[i])
+		  {
+smallest=arr[i];
+		  }
+		}
+		System.out.println("second highest element is ==> "+large1);
+		System.out.println("smalllest element is ==> "+smallest);
+		System.out.println("diffrence  ==> "+(large1-smallest));
+	}
+}
+
+
+
